@@ -13,6 +13,13 @@ ___
 `gitStream` is a workflow automation tool to optimize your code review process.  
 Add context to Pull Requests, find code experts for reviews, and automate the merge process to maximize developer productivity!
 
+## Table of Contents
+- [Why gitStream and not GitHub Actions?](#why-gitstream-and-not-github-actions)
+- [Meet gitStream Bot: Your Code Review Sidekick!](#meet-gitstream-bot-your-code-review-sidekick)
+- [Users loving gitStream](#users-loving-gitstream)
+- [Getting started in two min](#getting-started-in-two-min)
+- [The gitStream Dashboard](#the-gitstream-dashboard)
+  
 ## Why gitStream and not GitHub Actions?
 
 Think of gitStream as the Robin to your GitHub Actions Batman. It’s not here to replace GitHub Actions or other CI/CD pals like CircleCI or Jenkins. Instead, gitStream is optimized to enhance the [continuous merge process](https://linearb.io/blog/what-is-continuous-merge) for open-source projects with multiple contributors.
@@ -141,3 +148,4 @@ Imagine having a high-tech control room where you can see every move, every auto
 <img src="https://github.com/eyarz/gitstream/assets/19731161/560fcfb6-0151-47e5-b937-66868ef793ae" width="80%">
 
 <br><hr>
+[🔼 Back to top](#table-of-Contents)
