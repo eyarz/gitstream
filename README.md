@@ -1,7 +1,7 @@
 <p align="center">
- <img src="https://github.com/eyarz/gitstream/assets/19731161/c76a227d-17d7-4a47-91b7-2d25f0dee03e" alt="gitstream-no-bg" border="0" />
+  <img src="https://github.com/eyarz/gitstream/assets/19731161/c76a227d-17d7-4a47-91b7-2d25f0dee03e" alt="gitstream-no-bg-white" border="0" />
 </p>
- 
+
 <p align="center">
  <img src="https://img.shields.io/badge/License-Apache_2.0-yellow.svg" />
  <img src="https://img.shields.io/badge/Marketplace-gitStream-blue" target="https://github.com/marketplace/gitstream-by-linearb"/>
@@ -15,31 +15,33 @@ Add context to Pull Requests, find code experts for reviews, and automate the me
 
 ## Why gitStream and not GitHub Actions?
 
-gitStream complements, rather than replaces, GitHub Actions and other CI/CD tools like CircleCI or Jenkins.  
-While gitStream should be used to enhance the [continuous merge process](https://linearb.io/blog/what-is-continuous-merge) for open-source projects with multiple contributors, GitHub Actions is ideal for other automation tasks like publishing artifacts and deployment to production.  
+Think of gitStream as the Robin to your GitHub Actions Batman. It’s not here to replace GitHub Actions or other CI/CD pals like CircleCI or Jenkins. Instead, gitStream is optimized to enhance the [continuous merge process](https://linearb.io/blog/what-is-continuous-merge) for open-source projects with multiple contributors.
 
-gitStream bot can _shorten code review cycles by 40%_ with [built-in automation](https://docs.gitstream.cm/automations/automation-library/) like:
+## Meet gitStream Bot: Your Code Review Sidekick!
+gitStream bot can _shorten your code review cycles by a 40%_ with [built-in automation](https://docs.gitstream.cm/automations/automation-library/) like:
 
-* **Enforce Semantic PR Titles** - enforce pull request naming conventions
-* **Calculate percent new code** - post a comment with the percentage of new code
-* **Assign code experts** - assign recommended reviewers based on code components
-* **Provide estimated time to review** - label PRs estimated number of minutes it would take to review
+* **🏷️ Enforce Semantic PR Titles** - enforce pull request naming conventions
+* **📊 Calculate percent new code** - post a comment with the percentage of new code
+* **🎯 Assign code experts** - assign recommended reviewers based on code components
+* **🕰️ Provide estimated time to review** - label PRs estimated number of minutes it would take to review
 
-## Users
+## Users loving gitStream
 
-Here are some popular open-source projects that are using gitStream automations:
+From small side projects to complex codebases, all types of open source communities love gitStream:
 * [gradle/gradle](https://github.com/gradle/gradle/tree/master/.cm) 15.2k ⭐
 * [gitcoinco/grants-stack](https://github.com/gitcoinco/grants-stack/tree/main/.cm) 250 ⭐
 * [vim-zz/swordfish-rs](https://github.com/vim-zz/swordfish-rs/tree/main/.cm) 50 ⭐
-* [linear-b/gitstream](https://github.com/linear-b/gitstream/tree/main/.cm) (yes, the gitStream docs are checked with gitStream 🤯)
+* [linear-b/gitstream](https://github.com/linear-b/gitstream/tree/main/.cm) (Yes, PRs to gitStream docs are also checked with gitStream 🤯)
   
 ## Getting started in two min
 
-#### 1️⃣ [Install the GitHub app from the marketplace](https://github.com/marketplace/gitstream-by-linearb)
-gitStream is a verified GitHub app that was audited and approved by the GitHub Security team.  
+**1️⃣ Install the GitHub app**  
+ gitStream is a verified GitHub app on the [marketplace](https://github.com/marketplace/gitstream-by-linearb), audited and approved by the GitHub Security team. 
 
-#### 2️⃣ Create a `.cm/gitstream.cm` rules file in your repository's default branch (usually `master` or `main`)  
-For example, this rule file will add a label with an [estimated time to review](https://docs.gitstream.cm/automations/provide-estimated-time-to-review/) for every new pull request:
+**2️⃣ Create a `.cm/gitstream.cm` automations file in your repository**  
+This file will contain a YAML configuration that determines the automations that run on every PR to the repository's default branch (usually _master_ or _main_).  
+<br>
+For example, this automation file will add a label with an [estimated time to review](https://docs.gitstream.cm/automations/provide-estimated-time-to-review/) for every new pull request:
 ![image](https://github.com/eyarz/gitstream/assets/19731161/a6a2338d-70e7-4d2b-8770-f1145092898e)
 
   ```yaml
@@ -72,8 +74,8 @@ For example, this rule file will add a label with an [estimated time to review](
     etr: {{ branch | estimatedReviewTime }}
 ```
    
-#### 3️⃣ Create a `.github/workflows/gitstream.yml` file in your repository's default branch to trigger gitStream automations  
-Copy-paste the following configuration file (**no need to edit**):
+**3️⃣ Create a `.github/workflows/gitstream.yml` file in your repository's default branch to trigger gitStream automations**  
+Copy-paste the following configuration file (no need to edit):
 ```yaml
 # Code generated by gitStream GitHub app - DO NOT EDIT
 
@@ -126,12 +128,16 @@ jobs:
           resolver_token: ${{ github.event.inputs.resolver_token }}
 
 ```
-> To enforce consistent automations across all repos in your organization. You can define them by creating a special repository named cm in your GitHub organization where you can add automation files that will apply to all repositories within that organization.[Check out our docs for more info](https://docs.gitstream.cm/github-installation/).
+> Ensure uniformity in automations across all repositories in your organization by creating a special repository named cm within your GitHub organization. Here, you can add automation files that will seamlessly apply to all repositories under the organization’s umbrella 🌂
+> Want to dive deeper? [Check out our docs for more detailed info](https://docs.gitstream.cm/github-installation/).
 
-## Dashboard
+## The gitStream Dashboard
 
-🖥️ gitStream also provides a birds-eye view of all the automations that were executed and their results
+Imagine having a high-tech control room where you can see every move, every automation executed, and its impact—all in one place. Welcome to the [_gitStream Dashboard!_](https://app.gitstream.cm/)
 
-<a href="[default.asp](https://app.gitstream.cm/)"><img src="https://github.com/eyarz/gitstream/assets/19731161/560fcfb6-0151-47e5-b937-66868ef793ae" width="80%"></a>
+* 👀 **Get a Bird's-Eye View:** Observe all executed automations and their outcomes from a single, intuitive interface.
+* 📊 **Analyze & Optimize:** Delve into detailed reports that help you understand the effectiveness of your automations, enabling you to fine-tune them for even smoother workflows.
+
+<img src="https://github.com/eyarz/gitstream/assets/19731161/560fcfb6-0151-47e5-b937-66868ef793ae" width="80%">
 
 <br><hr>
