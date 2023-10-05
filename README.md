@@ -135,8 +135,12 @@ jobs:
           resolver_token: ${{ github.event.inputs.resolver_token }}
 
 ```
-> Ensure uniformity in automations across all repositories in your organization by creating a special repository named cm within your GitHub organization. Here, you can add automation files that will seamlessly apply to all repositories under the organization’s umbrella 🌂
-> Want to dive deeper? [Check out our docs for more detailed info](https://docs.gitstream.cm/github-installation/).
+<details>
+  <summary>How to ensure uniformity across all repositories?</summary>
+  <br>
+  By creating a special repository named cm within your GitHub organization and placing your automation files there, you'll seamlessly apply the same rules to all repositories under the organization’s umbrella 🌂  
+  Check out our docs for more detailed info: https://docs.gitstream.cm/github-installation/
+</details>
 
 ## The gitStream Dashboard
 
